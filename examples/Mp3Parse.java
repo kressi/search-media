@@ -18,7 +18,7 @@ public class Mp3Parse {
       //detecting the file type
       BodyContentHandler handler = new BodyContentHandler();
       Metadata metadata = new Metadata();
-      FileInputStream inputstream = new FileInputStream(new File("../resources/Showtek - FTS.mp3"));
+      FileInputStream inputstream = new FileInputStream(new File("../documents/Showtek - FTS.mp3"));
       ParseContext pcontext = new ParseContext();
       
       //Mp3 parser

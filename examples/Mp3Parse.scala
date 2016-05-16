@@ -20,7 +20,7 @@ object Mp3Parse {
       //detecting the file type
       val handler:BodyContentHandler = new BodyContentHandler()
       val metadata:Metadata = new Metadata()
-      val inputstream:FileInputStream  = new FileInputStream(new File("../resources/Showtek - FTS.mp3"))
+      val inputstream:FileInputStream  = new FileInputStream(new File("../documents/Showtek - FTS.mp3"))
       val pcontext:ParseContext = new ParseContext()
       
       //Mp3 parser
