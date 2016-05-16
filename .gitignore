@@ -1,0 +1,12 @@
+# lucene and solr
+lucene-6.0.0/
+solr-6.0.0/
+
+# Archives
+*.tgz
+
+# Java, Scala class files
+*.class
+
+# Gradle
+target/
