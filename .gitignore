@@ -9,4 +9,5 @@ solr-6.0.0/
 *.class
 
 # Gradle
-target/
+build/
+.gradle/

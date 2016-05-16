@@ -1,5 +1,19 @@
 # Examples in Java & Scala
 
+## Complie & Run
+
+**Java**
+```bash
+javac -cp '.:../ext/*' HelloLucene.java
+java -cp '.:../ext/*' HelloLucene
+```
+
+**Scala**
+```bash
+scalac -cp '.:../ext/*' Mp3Parse.scala
+scala -cp '.:../ext/*' Mp3Parse
+```
+
 ## Lucene
 
 Java source is taken from [Lucene in 5 minutes](http://www.lucenetutorial.com/lucene-in-5-minutes.html).
@@ -14,30 +28,6 @@ wget http://repo1.maven.org/maven2/org/apache/lucene/lucene-analyzers-common/6.0
 wget http://repo1.maven.org/maven2/org/apache/lucene/lucene-queryparser/6.0.0/lucene-queryparser-6.0.0.jar
 ```
 
-### HelloLucene.java
-
-**Compile**
-```bash
-javac -cp '.:../ext/*' HelloLucene.java
-```
-
-**Run**
-```bash
-javac -cp '.:../ext/*' HelloLucene
-```
-
-### HelloLucene.scala
-
-**Compile**
-```bash
-scalac -cp '.:../ext/*' HelloLucene.scala
-```
-
-**Run**
-```bash
-scala -cp '.:../ext/*' HelloLucene
-```
-
 ## Tika
 
 Java source is taken from [TIKA - Extracting mp3 Files](http://www.tutorialspoint.com/tika/tika_extracting_mp3_files.htm), there are all kinds of useful examples to parse files with Tika.
@@ -48,17 +38,3 @@ Java source is taken from [TIKA - Extracting mp3 Files](http://www.tutorialspoin
 wget http://repo1.maven.org/maven2/org/apache/tika/tika-core/1.9/tika-core-1.9.jar
 wget http://repo1.maven.org/maven2/org/apache/tika/tika-parsers/1.9/tika-parsers-1.9.jar
 ```
-
-### Mp3Parse.java
-
-**Compile**
-```bash
-javac -cp '.:../ext/*' Mp3Parse.java
-```
-
-**Run**
-```bash
-javac -cp '.:../ext/*' Mp3Parse
-```
-
-### Mp3Parse.scala

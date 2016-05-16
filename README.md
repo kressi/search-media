@@ -7,6 +7,14 @@
 - [Solr](https://lucene.apache.org/solr/)
 - [Tika](http://tika.apache.org/)
 
+## Build Project
+
+```bash
+git clone git@github.com:kressi/search-media.git
+cd search-media
+./gradlew build
+```
+
 ## Installation Solr
 
 - [Solr in 5 minutes](http://www.solrtutorial.com/solr-in-5-minutes.html)
@@ -46,16 +54,17 @@ tar -zxvf lucene-6.0.0.tgz
 - [tika-python](https://github.com/chrismattmann/tika-python)
 - [Tika & Lucene](https://dzone.com/articles/understanding-information)
 - http://tika.apache.org/1.12/gettingstarted.html
+- https://github.com/rickcrawford/lucene-example
 
 ```bash
 wget http://mirror.switch.ch/mirror/apache/dist/tika/tika-app-1.12.jar
 ```
 
-## Matroska
+### Matroska
 
 - [Diagram Container](https://www.matroska.org/technical/diagram/index.html)
 - [Tagging](https://www.matroska.org/technical/specs/tagging/index.html)
 
-## ID3
+### ID3
 
 - https://en.wikipedia.org/wiki/ID3
