@@ -4,14 +4,14 @@
 
 **Java**
 ```bash
-javac -cp '.:../ext/*' HelloLucene.java
-java -cp '.:../ext/*' HelloLucene
+javac -cp '.:ext/*' HelloLucene.java
+java -cp '.:ext/*' HelloLucene
 ```
 
 **Scala**
 ```bash
-scalac -cp '.:../ext/*' Mp3Parse.scala
-scala -cp '.:../ext/*' Mp3Parse
+scalac -cp '.:ext/*' Mp3Parse.scala
+scala -cp '.:ext/*' Mp3Parse
 ```
 
 ## Lucene

@@ -6,6 +6,9 @@
 - [Lucene](https://lucene.apache.org/)
 - [Solr](https://lucene.apache.org/solr/)
 - [Tika](http://tika.apache.org/)
+- [EasyTAG](https://wiki.gnome.org/Apps/EasyTAG)
+
+`examples` directory cotains minimal working examples for `Tika` and `Lucene`.
 
 ## Build Project
 
@@ -26,7 +29,7 @@ cd search-media
 - [Solr & tika](http://www.earthmagazine.org/sites/all/modules/search_api_attachments/README.txt)
 
 ```bash
-wget http://mirror.switch.ch/mirror/apache/dist/lucene/solr/6.0.0/solr-6.0.0.tgz```
+wget http://mirror.switch.ch/mirror/apache/dist/lucene/solr/6.0.0/solr-6.0.0.tgz
 tar -zxvf solr-6.0.0.tgz
 cd solr-6.0.0
 ```
@@ -60,6 +63,8 @@ tar -zxvf lucene-6.0.0.tgz
 wget http://mirror.switch.ch/mirror/apache/dist/tika/tika-app-1.12.jar
 ```
 
+## Video & Tag Formats
+
 ### Matroska
 
 - [Diagram Container](https://www.matroska.org/technical/diagram/index.html)
@@ -68,3 +73,11 @@ wget http://mirror.switch.ch/mirror/apache/dist/tika/tika-app-1.12.jar
 ### ID3
 
 - https://en.wikipedia.org/wiki/ID3
+
+## Luke
+
+- https://github.com/tarzanek/luke
+- https://github.com/DmitryKey/luke
+- http://www.getopt.org/luke/
+- https://lucene.apache.org/core/3_5_0/contributions.html
+- https://lingpipe-blog.com/2012/07/24/using-luke-the-lucene-index-browser-to-develop-search-queries/
