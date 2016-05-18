@@ -4,7 +4,6 @@
 **Supervisor:** Ruxandra Domenig
 
 - [Lucene](https://lucene.apache.org/)
-- [Solr](https://lucene.apache.org/solr/)
 - [Tika](http://tika.apache.org/)
 - [EasyTAG](https://wiki.gnome.org/Apps/EasyTAG)
 
@@ -16,22 +15,6 @@
 git clone git@github.com:kressi/search-media.git
 cd search-media
 ./gradlew build
-```
-
-## Installation Solr
-
-- [Solr in 5 minutes](http://www.solrtutorial.com/solr-in-5-minutes.html)
-- [solr mirrors](http://www.apache.org/dyn/closer.lua/lucene/solr/)
-- [Getting started](https://cwiki.apache.org/confluence/display/solr/Getting+Started)
-- http://www.developer.com/open/searching-indexed-data-with-solr.html
-- http://solr.pl/en/2011/03/21/solr-and-tika-integration-part-1-basics/
-- http://stackoverflow.com/questions/5896942/nutch-1-2-crawl-or-parse-mp3
-- [Solr & tika](http://www.earthmagazine.org/sites/all/modules/search_api_attachments/README.txt)
-
-```bash
-wget http://mirror.switch.ch/mirror/apache/dist/lucene/solr/6.0.0/solr-6.0.0.tgz
-tar -zxvf solr-6.0.0.tgz
-cd solr-6.0.0
 ```
 
 ## Lucene
@@ -51,6 +34,7 @@ cd solr-6.0.0
 ```bash
 wget http://mirror.switch.ch/mirror/apache/dist/lucene/java/6.0.0/lucene-6.0.0.tgz
 tar -zxvf lucene-6.0.0.tgz
+cd lucene-6.0.0
 ```
 
 ## tika
