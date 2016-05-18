@@ -66,3 +66,15 @@ wget http://mirror.switch.ch/mirror/apache/dist/tika/tika-app-1.12.jar
 - http://www.getopt.org/luke/
 - https://lucene.apache.org/core/3_5_0/contributions.html
 - https://lingpipe-blog.com/2012/07/24/using-luke-the-lucene-index-browser-to-develop-search-queries/
+
+**Install Luke**
+```bash
+git clone https://github.com/DmitryKey/luke.git
+cd luke
+mvn install
+```
+
+**Run Luke with**
+```bash
+./luke.sh
+```
