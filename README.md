@@ -46,6 +46,7 @@ cd solr-6.0.0
 - https://github.com/macluq/HelloLucene/blob/master/src/main/java/HelloLucene/HelloLucene.java
 - https://scottcote.wordpress.com/2015/09/08/update-for-lucenetutorial/
 - http://www.developer.com/open/implement-data-indexing-and-search-with-lucene-and-solr.html
+- https://lingpipe-blog.com/2014/03/08/lucene-4-essentials-for-text-search-and-indexing/
 
 ```bash
 wget http://mirror.switch.ch/mirror/apache/dist/lucene/java/6.0.0/lucene-6.0.0.tgz
