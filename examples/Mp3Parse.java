@@ -27,15 +27,15 @@ public class Mp3Parse {
       LyricsHandler lyrics = new LyricsHandler(inputstream,handler);
       
       while(lyrics.hasLyrics()) {
-    	  System.out.println(lyrics.toString());
+        System.out.println(lyrics.toString());
       }
       
       System.out.println("Contents of the document:" + handler.toString());
       System.out.println("Metadata of the document:");
       String[] metadataNames = metadata.names();
 
-      for(String name : metadataNames) {		        
-    	  System.out.println(name + ": " + metadata.get(name));
+      for(String name : metadataNames) {             
+        System.out.println(name + ": " + metadata.get(name));
       }
    }
 }

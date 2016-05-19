@@ -29,7 +29,7 @@ object Mp3Parse {
       val lyrics:LyricsHandler = new LyricsHandler(inputstream,handler)
       
       while (lyrics.hasLyrics()) {
-    	  System.out.println(lyrics.toString())
+         System.out.println(lyrics.toString())
       }
       
       System.out.println("Contents of the document:" + handler.toString())
@@ -37,7 +37,7 @@ object Mp3Parse {
       val metadataNames:Array[String] = metadata.names()
 
       for (name:String <- metadataNames) {
-    	  System.out.println(name + ": " + metadata.get(name))
+          System.out.println(name + ": " + metadata.get(name))
       }
    }
 }

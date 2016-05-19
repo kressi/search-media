@@ -18,3 +18,12 @@ dependencies {
     testCompile 'org.scalatest:scalatest_2.11:2.2.6'
     testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.0.5'
 }
+
+apply plugin: 'application'
+mainClassName = "ch.kressi.search_media.Application"
+
+// http://stackoverflow.com/questions/21358466/gradle-to-execute-java-class-without-modifying-build-gradle
+task execute(type:JavaExec) << {
+   main = mainClass
+   classpath = sourceSets.main.runtimeClasspath
+}
