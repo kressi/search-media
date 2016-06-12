@@ -22,6 +22,14 @@ dependencies {
 apply plugin: 'application'
 mainClassName = "ch.kressi.search_media.Application"
 
+test {
+    testLogging {
+        // Show output from stdout and stderror
+        // http://mrhaki.blogspot.ch/2014/10/gradle-goodness-show-standard-out-or.html
+        showStandardStreams = true
+    }
+}
+
 // http://stackoverflow.com/questions/27604283/gradle-task-pass-arguments-to-java-application/29382636#29382636
 run {
     // gradle run -PappArgs="['arg1', 'args2']"
