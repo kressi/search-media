@@ -7,9 +7,7 @@ import org.scalatest.junit.JUnitRunner
 @RunWith(classOf[JUnitRunner])
 class WriteIndexSuite extends FunSuite {
     test("main and is always true") {
-        val idx = new WriteIndex()
-        idx()
-        val srch = new SearchIndex()
-        srch()
+        Writer()
+        Searcher()
     }
 }
