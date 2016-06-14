@@ -24,9 +24,8 @@ object Searcher {
         // Build a Query object
         val fields = Array("album", "author", "composer", "album", "title")
         val parser = new MultiFieldQueryParser(fields, new StandardAnalyzer())
-        val query = Try(parser.parse("Shpongle"))
 
-        query match {
+        Try(parser.parse("Shpongle")) match {
             case Success(q) => 
                 val hitsPerPage = 10
                 val reader = DirectoryReader.open(index)
