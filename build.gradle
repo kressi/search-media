@@ -13,6 +13,7 @@ dependencies {
     compile 'org.apache.lucene:lucene-queryparser:6.0.0'
     compile 'org.apache.tika:tika-parsers:1.13'
     compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.gagravarr:vorbis-java-tika:0.8'
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.scalatest:scalatest_2.11:2.2.6'

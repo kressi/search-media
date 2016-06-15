@@ -3,15 +3,14 @@ package ch.kressi.search_media
 import scala.util.{Try, Success, Failure}
 import scala.util.control.Exception.catching
 
-import java.io.{ File, IOException }
-import java.nio.file.{ Path, Paths }
+import java.io.IOException
+import java.nio.file.Paths
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer
-import org.apache.lucene.document.Document
 import org.apache.lucene.index.DirectoryReader
-import org.apache.lucene.queryparser.classic.{ ParseException, QueryParser, MultiFieldQueryParser }
-import org.apache.lucene.search.{ IndexSearcher, Query, ScoreDoc, TopScoreDocCollector }
-import org.apache.lucene.store.{ Directory, FSDirectory }
+import org.apache.lucene.queryparser.classic.{ ParseException, MultiFieldQueryParser }
+import org.apache.lucene.search.{ IndexSearcher, TopScoreDocCollector }
+import org.apache.lucene.store.FSDirectory
 
 object Searcher {
 
@@ -33,12 +32,12 @@ object Searcher {
                 val collector = TopScoreDocCollector.create(hitsPerPage)
                 searcher.search(q, collector)
                 
-                System.out.println("total hits: " + collector.getTotalHits());      
+                println("total hits: " + collector.getTotalHits())   
                 
                 val hits = collector.topDocs().scoreDocs
                 for (hit <- hits) {
                     val doc = reader.document(hit.doc)
-                    System.out.println(doc.get("file") + "  (" + hit.score + ")")
+                    println(doc.get("file") + "  (" + hit.score + ")")
                 }
             case Failure(e) => e.printStackTrace()
         }       

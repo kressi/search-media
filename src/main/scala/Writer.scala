@@ -7,7 +7,7 @@ import scala.collection.JavaConversions._
 import java.io.{ File, FileInputStream, FilenameFilter }
 import java.nio.file.Paths
 
-import org.apache.commons.io.FileUtils
+import org.apache.commons.io.{ FileUtils, FilenameUtils }
 import org.apache.commons.lang3.StringUtils
 import org.apache.lucene.analysis.standard.StandardAnalyzer
 import org.apache.lucene.document.{ Document, StoredField, StringField, TextField }
@@ -24,7 +24,6 @@ object Writer {
 
     def apply(): Unit = {
 
-        // http://docs.oracle.com/javase/8/docs/api/java/io/File.html#listFiles-java.io.FileFilter-
         val wd = for {
             writer <- mkWriter(Config.indexPath)
             docs   <- Try(new File(Config.documentsPath))
@@ -52,13 +51,7 @@ object Writer {
     }
 
     def addDocuments(w:IndexWriter) (docs:File): Unit = {
-        val filter = new FilenameFilter() {
-            override def accept(dir: File, name: String): Boolean = {
-                name matches "^.+\\.(mp3|flac)$"
-            }
-        }
         val extensions = Array("mp3", "flac")
-        //for (file <- docs.listFiles(filter)) {
         for (file <- FileUtils.listFiles(docs, extensions, true).toList) {
 
             val metadata = new Metadata
@@ -82,7 +75,8 @@ object Writer {
 
     def mkDocument (fileName:String, metadata:Metadata): Document = {
 
-        val fieldPat = "([a-z0-9]+):(album|releasedate|genre)".r
+        val fieldPat = "([a-z0-9]+):([a-z0-9]+)".r
+        val xmpdmAttrs = Array("album", "releasedate", "genre")
 
         val doc = new Document()
         doc.add(new StoredField("file", fileName))
@@ -99,7 +93,7 @@ object Writer {
                         }
                     case "title" | "author" | "composer" =>
                         doc.add(new TextField(name, value, Store.YES))
-                    case fieldPat("xmpdm", attr) =>
+                    case fieldPat("xmpdm", attr) if xmpdmAttrs contains attr =>
                         doc.add(new TextField(attr, value, Store.YES))
                     case _ => ()
                 }
