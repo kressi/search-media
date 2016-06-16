@@ -1,0 +1,10 @@
+% Koma Script Header & Footer
+\usepackage[automark,headsepline,footsepline,plainfootsepline]{scrlayer-scrpage}
+%\clearpairofpagestyles
+\ihead{\textsc{\leftmark}}
+\chead{}
+\ifoot[Michael Kressibucher]{Michael Kressibucher}
+\cfoot[Information Retrieval]{Information Retrieval}
+\ofoot[\pagemark]{\pagemark}
+\renewcommand*\pagemark{{\usekomafont{pagenumber}Seite\nobreakspace\thepage}}
+\addtokomafont{pageheadfoot}{\upshape}

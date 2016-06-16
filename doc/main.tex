@@ -1,0 +1,131 @@
+\documentclass[
+  11pt
+ ,abstracton
+ ,parskip=full
+ ,toc=bibliography
+ ,toc=listof
+ ,ngerman
+]{scrreprt}
+% abstracton        adds abstract to document
+% parskip           insert space between paragraphs
+% toc=bibliography  adds bibliography to toc
+% toc=index         ...
+% toc=listof        adds figures to toc
+% ngerman           option for babel and cleveref
+
+%--------------------------------------
+% Packages
+%--------------------------------------
+% Encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% https://en.wikibooks.org/wiki/LaTeX/Paragraph_Formatting#Multiline_comments
+\usepackage{verbatim}
+
+% KOMA Script
+% -----------
+% suppress: 'Class scrreprt Warning: \float@addtolists detected!'
+\usepackage{scrhack}
+
+% Header & Footer
+\usepackage{myheader}
+
+% German-specific commands
+\usepackage{babel}
+\usepackage{csquotes}
+
+% Use href and url
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+
+% Bibliography
+% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+\usepackage[backend=biber,
+            %style=numeric-comp,
+            citestyle=numeric-comp,
+            sortcites=true]{biblatex}
+\addbibresource{bib/library.bib}
+\nocite{*}
+
+% Source Code Listings
+\usepackage{listings} 
+\usepackage{mylist}
+
+\usepackage{tabu}
+% for noitemsep
+\usepackage{enumitem}
+
+% Math, Theorems etc.
+% -------------------
+%\usepackage{amsmath, amsthm, amssymb}
+%\everymath{\displaystyle}
+
+%--------------------------------------
+% Meta
+%--------------------------------------
+
+% Titelblatt: Name, Titel, Datum (Abgabetermin oder Semester),
+% Studiengang und Kurs, Hochschule
+\titlehead{ZHAW - Zürcher Hochschule für angewandte Wissenschaften}
+\subject{Seminararbeit}
+\title{Information Retrieval}
+\subtitle{ Evaluierung der Retrieval-Leistung einer Search\\
+           Engine am Beispiel einer Media Library }
+        
+\author{
+  Michael Kressibucher\\
+  %\texttt{kressmic@students.zhaw.ch}
+  \texttt{\href{mailto:kressmic@students.zhaw.ch}{kressmic@students.zhaw.ch}}
+}
+
+\date{
+    Betreuerin: Ruxandra Domenig\\
+    %Stand:    \today\\
+    Abgabe:   15. Juni 2016
+}
+
+%--------------------------------------
+% Document
+%--------------------------------------
+% Only includes following files
+% includeonly does not mess up aux file and retains
+% references.
+\includeonly{
+  %tex/00_exercise,
+  tex/10_intro,
+  tex/15_media_formats,
+  tex/20_setup,
+  tex/30_analysis,
+  tex/60_conclusion,
+}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  \input{tex/05_abstract}
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\include{tex/00_exercise}
+\include{tex/10_intro}
+\include{tex/15_media_formats}
+\include{tex/20_setup}
+\include{tex/30_analysis}
+\include{tex/60_conclusion}
+
+\appendix
+
+\listoffigures
+\listoftables
+
+% Bibliography
+\printbibliography[title=Quellenverzeichnis]
+
+\end{document}
+%--------------------------------------

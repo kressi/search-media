@@ -1,0 +1,49 @@
+\begin{comment}
+\paragraph{Ausgangslage} \hfill \\
+Auf einem privaten Network Attached Storage (NAS) sind mehrere Hundert Video und mehrere Tausend Musikdateien abgelegt. Diese sind in groben Ordnerstrukturen organisiert. Clientseitig existiert eine Suche, mit welcher die Dateinamen durchsucht werden können. Da die meisten dieser Dateien mit Metadaten versehen ist es wünschenswert auch diese Daten durchsuchen zu können.
+
+\paragraph{Ziel der Arbeit} \hfill \\
+Im Rahmen dieser Arbeit sollen die Metadaten der Dateien einer Media Library auf einem Network Attached Storage indiziert werden. Auf dem erstellten Index sollen Suchabfragen ausgeführt werden können.
+\end{comment}
+
+
+\chapter{Einleitung}
+Im Rahmen dieser Arbeit werden Metadaten spezifischer Mediadateien
+mit der Information Retrieval Bibliothek Apache Lucene 
+\cite{web:lucene} indiziert und durchsucht.
+
+Dafür werden in \cref{ch:formats} verfügbare Mediaformate und 
+insbesondere deren
+Metadaten genauer untersucht. In dieser Analyse werden
+die zu indizierenden Attribute der Mediaformate ausgewählt.
+Zusätzlich wird aufgezeigt, wie die Metadaten der Mediadateien
+mit der Inhalt Erkennungs und Analyse Library Apache Tika
+\cite{web:tika} aufbereitet werden.
+
+Anschliessend werden die extrahierten Metadaten in \cref{ch:setup}
+mittels Apache Lucene indiziert. Über die indizierten Attribute
+wird eine erste einfache Abfrage erstellt. Primär soll der Index
+verwendet werden um in \cref{ch:analysis} aus einer kleinen Menge von Dokumenten die Genauigkeit und Trefferquote von Abfragen an
+den Index zu untersuchen.
+
+Der gesamte Sourcecode zu dieser Arbeit und weitere hilfreiche
+Beispiele sind unter \url{https://github.com/kressi/search-media}
+verfügbar. Die Beispiele wurden alle mit
+\href{http://www.scala-lang.org/documentation/}{Scala} geschrieben.
+Scala ist eine Funktionale Programmiersprache welche in 
+der Java Virtual Machine (JVM) ausgeführt wird. Das heisst,
+alle in der Arbeit verwendeten Java Packages können ohne
+weiteres verwendet werden.
+
+\paragraph{Ausgangslage} \hfill \\
+In der zu indizierenden, privaten Media Library befinden sich
+Musik- und Videodateien in unterschiedlichen Formaten.
+Im Rahmen dieser Arbeit werden wir daraus zwei unterschiedliche
+Audioformate auswählen und indizieren.
+Diese Library liegt auf einem Network Attached Storage (NAS)
+und wird im lokalen Netzwerk den Clients zur verfügung
+gestellt. Bei den Clients ist das NAS über das WebDAV
+Protokoll unter einem lokalen Laufwerk geladen, der Zugriff
+auf die Dateien geschieht also wie wenn die Dateien auf
+der lokalen Festplatte gespeichert wären. Der Index wird nur
+lokal für einen Client erstellt.

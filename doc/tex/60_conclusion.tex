@@ -1,0 +1,37 @@
+\chapter{Fazit}
+In dieser Arbeit wurden zuerst die Formate der Mediadateien
+und deren Container für Tags analysiert. Es ist interessant
+die nicht geringen Unterschiede zwischen unterschiedlichen
+Formaten zu erkennen. Genauso ist es spannend zu sehen,
+dass ID3 Tags nicht nur für das MP3 und Vorbis Comments nicht
+nur für FLAC Format verwendet werden. Sobald man jedoch damit
+beginnt die Metadaten mit der Apache Tika Library zu parsen,
+stellt man fest, dass zumindest im Bereich von weit verbreiteten
+Mediaformaten, auch ohne jegliches Wissen über die verwendeten
+Tag Container oder deren Aufbau weiterkommt. Selbst mit
+Wissen über die Tag Container ist es einfacher den
+\emph{AutoDetectParser} zu verwenden. Dies macht es
+unglaublich leicht Metadaten aus Dateien zu extrahieren.
+
+Als nächster Schritt wurden die Metadaten indiziert.
+Auch dieser Schritt geht mit den Apache Libraries leicht von
+der Hand, zumindest solange man die Standardkonfiguration verwendet.
+Dies ist sehr angenehmn, so sieht man schnell
+ein Resultat, was motiviert weiterzumachen. Genauso
+sieht man schnell ein Resultat wenn man eine Abfrage erstellt.
+
+Für die Analyse wurde das Tool Luke verwendet, der Funktionsumfang
+dieses Tools ist für die Entwicklung und die Analyse von
+Indizes unglaublich wertvoll. Um jedoch einmal erst
+soweit zu kommen hat es sich erstaunlich kompliziert
+herausgestellt eine Version von Luke zu finden, welche
+die aktuellste Version\footnote{Zum Zeitpunkt dieser Arbeit war 6.0.0
+die aktuellste stabile Version von Apache Lucene.} des
+Lucene Index lesen kann. Dies mag daran liegen, dass
+normalerweise \href{https://www.elastic.co/products/elasticsearch}{Elasticsearch}
+oder \href{https://lucene.apache.org/solr/}{Solr} verwendet
+werden, welche gleich die eigenen Analyse Tools mitliefern.
+Bei der Analyse selbst wurden keine so hohe Precision und Recall
+Werte erwartet. Wenn man jedoch das Information Retrieval System
+betrachtet ist es logisch solche Werte zu erreichen.
+

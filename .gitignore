@@ -11,3 +11,6 @@ solr-6.0.0/
 # Gradle
 build/
 .gradle/
+
+# Latex
+*.aux
