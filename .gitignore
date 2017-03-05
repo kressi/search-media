@@ -13,4 +13,16 @@ build/
 .gradle/
 
 # Latex
+## Core latex/pdflatex auxiliary files:
 *.aux
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*.run.xml
