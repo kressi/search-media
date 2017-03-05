@@ -40,7 +40,8 @@ run {
 }
 
 // http://stackoverflow.com/questions/21358466/gradle-to-execute-java-class-without-modifying-build-gradle
-task execute(type:JavaExec) << {
-   main = mainClass
-   classpath = sourceSets.main.runtimeClasspath
+task execute(type:JavaExec) {
+    doLast {
+        classpath = sourceSets.main.runtimeClasspath
+    }
 }
