@@ -1,6 +1,6 @@
 # lucene and solr
-lucene-6.0.0/
-solr-6.0.0/
+lucene-*/
+solr-*/
 
 # Archives
 *.tgz

@@ -2,7 +2,7 @@ package ch.kressi.search_media
 
 import scala.util.{Try, Success, Failure}
 import scala.util.control.Exception.catching
-import scala.collection.JavaConversions._
+import scala.collection.JavaConverters._
 
 import java.io.{ File, FileInputStream, FilenameFilter }
 import java.nio.file.Paths
@@ -52,7 +52,7 @@ object Writer {
 
     def addDocuments(w:IndexWriter) (docs:File): Unit = {
         val extensions = Array("mp3", "flac")
-        for (file <- FileUtils.listFiles(docs, extensions, true).toList) {
+        for (file <- FileUtils.listFiles(docs, extensions, true).asScala) {
 
             val metadata = new Metadata
             val handler  = new BodyContentHandler

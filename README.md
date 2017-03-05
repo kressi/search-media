@@ -25,16 +25,16 @@ cd search-media
 - http://search.cpan.org/~tbusch/Lucene-0.18/lib/Lucene.pm
 - https://mkaz.github.io/2011/06/28/how-to-use-scala-and-lucene-to-create-a-basic-search-application/
 - https://github.com/zouzias/lib-lucene-sugar
-- wiki.apache.org/lucene-java
+- https://wiki.apache.org/lucene-java
 - https://github.com/macluq/HelloLucene/blob/master/src/main/java/HelloLucene/HelloLucene.java
 - https://scottcote.wordpress.com/2015/09/08/update-for-lucenetutorial/
 - http://www.developer.com/open/implement-data-indexing-and-search-with-lucene-and-solr.html
 - https://lingpipe-blog.com/2014/03/08/lucene-4-essentials-for-text-search-and-indexing/
 
 ```bash
-wget http://mirror.switch.ch/mirror/apache/dist/lucene/java/6.0.0/lucene-6.0.0.tgz
-tar -zxvf lucene-6.0.0.tgz
-cd lucene-6.0.0
+wget http://mirror.switch.ch/mirror/apache/dist/lucene/java/6.4.1/lucene-6.4.1.tgz
+tar -zxvf lucene-6.4.1.tgz
+cd lucene-6.4.1
 ```
 
 ## tika
@@ -45,7 +45,7 @@ cd lucene-6.0.0
 - https://github.com/rickcrawford/lucene-example
 
 ```bash
-wget http://mirror.switch.ch/mirror/apache/dist/tika/tika-app-1.12.jar
+wget http://mirror.switch.ch/mirror/apache/dist/tika/tika-app-1.14.jar
 ```
 
 ## Video & Tag Formats
